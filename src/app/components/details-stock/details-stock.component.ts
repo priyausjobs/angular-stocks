@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-details-stock',
@@ -10,4 +10,11 @@ export class DetailsStockComponent {
   ngOnInit(): void {
     console.log('from parent',this.selectedStock);
   }
+
+  public camelCaseToWords(str: string) {
+    return str
+      .replace(/^[a-z]/g, char => ` ${char.toUpperCase()}`)
+      .replace(/[A-Z]|[0-9]+/g, ' $&')
+      .replace(/(?:\s+)/, char => '');
+  };
 }

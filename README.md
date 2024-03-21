@@ -1,4 +1,4 @@
-# Stock
+~~# Stock
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.1.
 
@@ -10,22 +10,19 @@ Run `ng serve --open` for a dev server. Navigate to `http://localhost:4200/`. Th
 
 Run json-server --watch .\data\db.json to launch server
 
-## Code scaffolding
+## Functionalities
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. List stock with mock data served by json serve
+2. View stock details on clicking Symbol
+3. Filter stock data based on tags
+4. Delete stock data on click of 'X' from screen & persistence
 
-## Build
+## To-Do (TO Be Improvised)
+1. Component for drop down
+2. Create pipe for converting came case words to word strings
+3. Refactor static typing
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+##Screenshots
+![stock_detail.png](screenshots%2Fstock_detail.png)
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![stock_list.png](screenshots%2Fstock_list.png)

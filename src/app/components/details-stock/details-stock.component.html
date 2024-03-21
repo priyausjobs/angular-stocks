@@ -18,7 +18,7 @@
           <span class="fw-bold">Market Cap:</span> {{selectedStock.marketCap}}
         </td>
         <td>
-          <span class="fw-bold">Tag:</span> {{selectedStock.tag | titlecase}}
+          <span class="fw-bold">Tag:</span> {{ camelCaseToWords(selectedStock.tag) | titlecase}}
         </td>
       </tr>
       </tbody>
