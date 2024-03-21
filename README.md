@@ -23,6 +23,7 @@ Run json-server --watch .\data\db.json to launch server
 3. Refactor static typing
 
 ##Screenshots
-![stock_detail.png](screenshots%2Fstock_detail.png)
 
 ![stock_list.png](screenshots%2Fstock_list.png)
+
+![stock_detail.png](screenshots%2Fstock_detail.png)
