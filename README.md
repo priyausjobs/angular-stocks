@@ -22,8 +22,7 @@ Run json-server --watch .\data\db.json to launch server
 2. Create pipe for converting came case words to word strings
 3. Refactor static typing
 
-##Screenshots
+## Screenshots
 
 ![stock_list.png](screenshots%2Fstock_list.png)
-
 ![stock_detail.png](screenshots%2Fstock_detail.png)
