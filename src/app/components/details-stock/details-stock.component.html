@@ -1,0 +1,27 @@
+<div class="stock-detail-container col-md-6 border">
+    <!--Stock Listing Start-->
+    <h5>Stock Detail</h5>
+    <table class="table table-borderless">
+      <thead class="thead-light">
+      </thead>
+      <tbody>
+      <tr>
+        <td>
+          <span class="fw-bold">Symbol:</span> {{selectedStock.symbol | uppercase }}
+        </td>
+        <td>
+          <span class="fw-bold">Name:</span> {{selectedStock.name | titlecase }}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="fw-bold">Market Cap:</span> {{selectedStock.marketCap}}
+        </td>
+        <td>
+          <span class="fw-bold">Tag:</span> {{selectedStock.tag | titlecase}}
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    <!--Stock Listing End-->
+</div>

@@ -1,0 +1,76 @@
+<div class="stock container shadow p-3 mb-5 bg-white rounded">
+  <div class="row">
+    <!--Stock Drop Down Start-->
+        <div class="w-50">
+          <h3>Stock Listing</h3>
+        </div>
+        <div class="w-50 text-lg-end">
+          <div class="col d-inline">Tag Filter: </div>
+          <div class="col-md-3 d-inline">
+            <select
+              class="form-select d-inline w-50 "
+              aria-label="Default select example"
+              [(ngModel)]="tagFilter">
+              <option value=""> All </option>
+              <option [value]="item.tag"
+                      *ngFor="let item of stocks">
+                {{ camelCaseToWords(item.tag) }}
+              </option>
+            </select>
+        </div>
+  </div>
+    <!--Stock Drop Down End-->
+  </div>
+  <div class="row">
+    <!--Stock Listing Start-->
+    <table class="table table-hover">
+      <thead class="thead-light">
+      <tr>
+        <th>Symbol</th>
+        <th>Last Price</th>
+        <th>Tag</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let stock of stocks | filterBy: ['tag']: tagFilter">
+        <td>
+          <a
+            href="javascript:void(0)"
+            class="text-decoration-none"
+            placement="top"
+            ngbTooltip="Click to see details"
+            (click)="OnShowStockDetails(stock.id)">
+            {{ stock.symbol | uppercase }}
+          </a>
+        </td>
+        <td>
+          {{ stock.lastPrice }}
+        </td>
+        <td>
+          {{ camelCaseToWords(stock.tag) | titlecase }}
+        </td>
+        <td>
+          <a
+            href="javascript:void(0)"
+            class="text-decoration-none"
+            placement="top"
+            ngbTooltip="Click to delete"
+            (click)="OnDeleteStock(stock.id)">
+            <i class="bi bi-x"></i>
+          </a>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    <!--Stock Listing End-->
+  </div>
+  <div class="row">
+    <!--Load Selected Stock Details Start-->
+    <app-details-stock
+      *ngIf="showStockDetails"
+      [selectedStock]="getSelectedStock">
+    </app-details-stock>
+    <!--Load Selected Stock Details End-->
+  </div>
+</div>

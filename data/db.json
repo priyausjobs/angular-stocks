@@ -1,0 +1,41 @@
+{
+  "stocks": [
+    {
+      "id": 1,
+      "name": "apple",
+      "symbol": "aapl",
+      "lastPrice": 133,
+      "marketCap": "2.2T",
+      "tag": "favorite"
+    },
+    {
+      "id": 2,
+      "name": "cisco",
+      "symbol": "cis",
+      "lastPrice": 52,
+      "marketCap": "1.3T",
+      "tag": "watching"
+    },{
+      "id": 3,
+      "name": "vm ware",
+      "symbol": "vmw",
+      "lastPrice": 165,
+      "marketCap": "4.1T",
+      "tag": "favorite"
+    },{
+      "id": 4,
+      "name": "brocade",
+      "symbol": "br",
+      "lastPrice": 178,
+      "marketCap": "5.8T",
+      "tag": "watching"
+    },{
+      "id": 5,
+      "name": "disney",
+      "symbol": "dis",
+      "lastPrice": 78,
+      "marketCap": "1.9T",
+      "tag": "forFriends"
+    }
+  ]
+}
